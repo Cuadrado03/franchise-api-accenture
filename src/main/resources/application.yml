@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: franchise-api
+
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/franchise_db
+    username: root
+    password: root
+    pool:
+      max-acquire-time: 2000ms
+      max-idle-time: 30m
+      max-life-time: 1h
+      max-create-connection-time: 2000ms
+
+  sql:
+    init:
+      mode: never
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.accenture.franchise: DEBUG
